@@ -1,0 +1,14 @@
+<div data-role="header" data-theme="b">
+    <h1>Desktop view</h1>
+</div><!-- /header -->
+
+<div data-role="content">
+    <a href="<%= switch_to_mobile_format_path %>" data-role="button" data-mini="true" data-inline="false" data-theme="b" data-iconpos="right">Switch to Mobile Format</a>
+</div>
+
+
+<%= javascript_tag :defer => 'defer' do -%>
+
+    $.mobile.navigate( "/" );
+
+<% end -%>

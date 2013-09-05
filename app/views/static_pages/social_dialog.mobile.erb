@@ -1,0 +1,36 @@
+<div role="dialog" class="ui-dialog-contain ui-corner-all ui-overlay-shadow" id="share_dialog">
+    <div data-role="header" data-theme="d"class="ui-corner-top ui-header ui-bar-d" role="banner">
+        <h1 class="ui-title" role="heading" aria-level="1">Share</h1>
+    </div>
+
+    <div data-role="content" data-theme="c" class="ui-corner-bottom ui-content ui-body-c" role="main">
+        <h1>Share this awesome content with your friends?</h1>
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a">
+                <%= link_to content_tag(:span, content_tag(:span, "Facebook", class: "ui-btn-text"), class: "ui-btn-inner ui-btn-corner-all"), 
+                            root_path(:format => :mobile), 
+                            :class => "ui-btn ui-shadow ui-btn-corner-all ui-btn-up-b", 
+                            :data => { role: "button", theme: "b", corners: "false", shadow: "true", iconshadow: "true", wrapperels: "span" }
+                 %>
+            </div>
+
+            <div class="ui-block-b">
+                <%= link_to content_tag(:span, content_tag(:span, "Twitter", class: "ui-btn-text"), class: "ui-btn-inner ui-btn-corner-all"), 
+                            root_path(:format => :mobile), 
+                            :class => "ui-btn ui-shadow ui-btn-corner-all ui-btn-up-b", 
+                            :data => { role: "button", theme: "b", corners: "false", shadow: "true", iconshadow: "true", wrapperels: "span" }
+                 %>
+            </div>
+
+            <div class="ui-block-a">
+                <%= link_to content_tag(:span, content_tag(:span, "Google +", class: "ui-btn-text"), class: "ui-btn-inner ui-btn-corner-all"), 
+                            root_path(:format => :mobile), 
+                            :class => "ui-btn ui-shadow ui-btn-corner-all ui-btn-up-b", 
+                            :data => { role: "button", theme: "b", corners: "false", shadow: "true", iconshadow: "true", wrapperels: "span" }
+                 %>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<% finished("social_share") %>

@@ -8,6 +8,10 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 
 gem 'json'
+gem 'mobylette'
+gem 'split', :require => 'split/dashboard'
+gem "jquery_mobile_rails"
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +23,15 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+  gem 'rspec'
+  gem 'rspec-rails'
+
 end
 
 gem 'jquery-rails'

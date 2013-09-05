@@ -1,4 +1,10 @@
 MobileUserTestApp::Application.routes.draw do
+  root to: 'static_pages#home'
+  mount Split::Dashboard, :at => 'split'
+  
+  match 'social_dialog' => 'static_pages#social_dialog'
+  match 'switch_to_mobile_format' => 'static_pages#switch_to_mobile_format'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

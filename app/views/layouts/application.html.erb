@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>MobileUserTestApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.mobile" %>  
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div data-role="page" id="demo-page" data-theme="d" data-url="demo-page">
+    <%= yield %>
+  </div>
 </body>
 </html>

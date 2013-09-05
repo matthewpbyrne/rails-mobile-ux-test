@@ -1,0 +1,11 @@
+<% ab_test("social_share", "sidepanel", "footer") do |menu| %>
+  <% if menu == "sidepanel" %>
+    <%= render 'shared/header_sidepanel_icon' %>
+    <%= render 'shared/text_content' %>
+    <%= render 'shared/sidebar' %>
+  <% elsif menu == "footer" %>
+    <%= render 'shared/header_no_sidepanel_icon' %>  
+    <%= render 'shared/text_content' %>
+    <%= render 'shared/footer' %>
+  <% end %>  
+<% end %>

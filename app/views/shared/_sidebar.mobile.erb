@@ -1,0 +1,21 @@
+<div data-role="panel" id="left-panel" data-theme="b">
+        <a href="#" data-rel="close" data-role="button" data-mini="false" data-inline="false" data-icon="home" data-iconpos="right">Home</a>
+        <a href="#" data-rel="close" data-role="button" data-mini="false" data-inline="false" data-icon="gear" data-iconpos="right">Settings</a>
+        <a href="<%= social_dialog_path %>" data-rel="dialog" data-role="button" data-mini="false" data-inline="false" data-icon="plus" data-iconpos="right">Share</a>
+        <a href="#" data-rel="close" data-role="button" data-mini="false" data-inline="false" data-icon="delete" data-iconpos="right">Close</a>
+</div><!-- /panel -->
+
+
+<%= javascript_tag :defer => 'defer' do -%>
+
+    $( document ).on( "pageinit", "#demo-page", function() {
+        $( document ).on( "swipeleft", "#demo-page", function( e ) {
+            if ( $.mobile.activePage.jqmData( "panel" ) !== "open" ) {
+                if ( e.type === "swiperight" ) {
+                    $( "#left-panel" ).panel( "open" );
+                }
+            }
+        });
+    });
+
+<% end -%>
