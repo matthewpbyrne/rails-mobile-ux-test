@@ -11,6 +11,7 @@ gem 'json'
 gem 'mobylette'
 gem 'split', :require => 'split/dashboard'
 gem "jquery_mobile_rails"
+gem 'heroku'
 
 
 # Gems used only for assets and not required
